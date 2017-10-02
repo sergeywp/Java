@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="first.rcp.application.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="first.rcp.application.Perspective"
+            id="first.rcp.application.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="first.rcp.application.ViewPart2"
+            id="first.rcp.application.ViewPart2"
+            name="name"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="first.rcp.application.category1"
+            name="File Managment Category">
+      </category>
+      <view
+      		allowMultiple = "true"
+            class="first.rcp.application.ViewPart5"
+            id="first.rcp.application.view5"
+            name="Explorer View"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
